@@ -1,0 +1,15 @@
+.product{
+  padding-top: 50px;
+  height:calc(100vh - 50px);
+  width: 100%;
+  &_box{
+    // background-color: red;
+    height: 100%;
+    width: 300px;
+    margin: auto;
+    &_titel{
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+= render "header"
+.new
+  .new_box
+    = form_with model: @item do |f|
+      .new_box_titel
+        [在庫登録]
+      .new_box_name
+        .new_box_name_titel
+          ・商品名
+        .new_box_name_input
+          = f.text_field :name, placeholder: "商品名"
+      .new_box_purchase
+        .new_box_purchase_titel
+          ・購入日
+        .new_box_purchase_input
+          = f.text_field :purchase, placeholder: "例) 5/1"
+      .new_box_stock
+        .new_box_stock_titel
+          ・在庫数
+        .new_box_stock_input
+          = f.number_field :stock,placeholder: "0"
+      .new_box_purchase
+        .new_box_expiration_titel
+          ・賞味期限
+        .new_box_expiration_input
+          = f.text_field :expiration, placeholder: "例) 5/8"
+      .new_box_submit
+        .new_box_submit_btn
+          = f.submit '登録'
+        .new_box_submit_root
+          = link_to "もどる",root_path
