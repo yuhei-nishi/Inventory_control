@@ -4,10 +4,11 @@
     .product_box_titel
       [在庫一覧]
     .product_box_name
-      卵
-    .product_box_name
-      卵
-    .product_box_name
-      卵
+      - @items.each do |item|
+        .product_box_name_list
+          = item.name
+          = item.stock
+          = item.purchase
+          = item.expiration
 = render 'exisibition'
   
