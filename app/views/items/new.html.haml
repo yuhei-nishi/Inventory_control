@@ -3,12 +3,12 @@
   .new_box
     = form_with model: @item do |f|
       .new_box_titel
-        [在庫登録]
+        [食品登録]
       .new_box_name
         .new_box_name_titel
-          ・商品名
+          ・食品名
         .new_box_name_input
-          = f.text_field :name, placeholder: "商品名"
+          = f.text_field :name, placeholder: "例) たまご"
       .new_box_purchase
         .new_box_purchase_titel
           ・購入日
@@ -16,10 +16,10 @@
           = f.text_field :purchase, placeholder: "例) 20200601"
       .new_box_stock
         .new_box_stock_titel
-          ・在庫数
+          ・個数
         .new_box_stock_input
-          = f.number_field :stock,placeholder: "0"
-      .new_box_purchase
+          = f.number_field :stock,placeholder: "例) 10"
+      .new_box_expiration
         .new_box_expiration_titel
           ・賞味期限
         .new_box_expiration_input
@@ -28,4 +28,4 @@
         .new_box_submit_btn
           = f.submit '登録'
         .new_box_submit_root
-          = link_to "もどる",root_path
+          = link_to "食品一覧にもどる",items_path

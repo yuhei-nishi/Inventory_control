@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.all
+    @items = Item.order("expiration")
   end
 
   def new
@@ -10,9 +10,9 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if  @item.save
-      redirect_to items_path, notice: '出品完了しました'
+      redirect_to items_path, notice: '食品登録しました'
     else
-      flash[:alert] = '出品できませんでした'
+      flash[:alert] = '食品登録できませんでした'
       redirect_to action: "new"
     end
   end

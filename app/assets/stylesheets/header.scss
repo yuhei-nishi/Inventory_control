@@ -5,7 +5,7 @@
   background-color: orange;
   text-align: center;
   line-height: 50px;
-  .header_box_right_name{
+  &_box_right_name{
     float: right;
     margin: 0 15px;
     a{
@@ -13,8 +13,13 @@
       text-decoration: none;
     }
   }
-  .header_box_left_name{
+  &_box_left_name{
     float: left;
     margin: 0 50px;
+  }
+  &_box_center{
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
   }
 }
