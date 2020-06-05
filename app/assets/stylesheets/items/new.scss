@@ -10,5 +10,67 @@
       font-size: 30px;
       font-weight: bold;
     }
+    &_name{
+      height: 100%;
+      width: 100%;
+      &_titel{
+        font-size: 20px;
+      }
+      input{
+        width: 200px;
+        height: 30px;
+      }
+    }
+    &_purchase{
+      height: 100%;
+      width: 100%;
+      &_titel{
+        font-size: 20px;
+      }
+      input{
+        width: 200px;
+        height: 30px;
+      }
+    }
+    &_stock{
+      height: 100%;
+      width: 100%;
+      &_titel{
+        font-size: 20px;
+      }
+      input{
+        width: 200px;
+        height: 30px;
+      }
+    }
+    &_expiration{
+      height: 100%;
+      width: 100%;
+      &_titel{
+        font-size: 20px;
+      }
+      input{
+        width: 200px;
+        height: 30px;
+      }
+    }
+    &_submit{
+      height: 100%;
+      width: 100%;
+      margin-top: 30px;
+      input{
+        width: 204px;
+        height: 34px;
+        font-size: 20px;
+      }
+      &_root{
+        margin-top: 30px;
+        width: 204px;
+        text-align: center;
+        a{
+          color: black;
+        }
+      }
+    }
   }
 }

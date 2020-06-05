@@ -1,3 +1,11 @@
+@mixin product_box{
+  height: 100%;
+  width: 120px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+
 .product{
   padding-top: 50px;
   height:calc(100vh - 50px);
@@ -5,11 +13,50 @@
   &_box{
     // background-color: red;
     height: 100%;
-    width: 300px;
+    width: 600px;
     margin: auto;
     &_titel{
       font-size: 30px;
       font-weight: bold;
+    }
+    &_item_list{
+      width: 100%;
+      height: 50px;
+      background-color: wheat;
+      display: flex;
+      &_expiration{
+        @include product_box;
+        background-color: rgb(243, 229, 203);
+      }
+      &_name{
+        @include product_box;
+        background-color: wheat;
+      }
+      &_stock{
+        @include product_box;
+        background-color: rgb(243, 229, 203);
+      }
+      &_purchase{
+        @include product_box;
+        background-color: wheat;
+      }
+      &_btn{
+        @include product_box;
+        background-color: whitesmoke;
+        display: flex;
+        &_edit{
+          width: 58px;
+          height: 48px;
+          border: 1px solid black;
+          color: black;
+        }
+        &_delete{
+          width: 58px;
+          height: 48px;
+          border: 1px solid black;
+          color: black;
+        }
+      }
     }
   }
 }
