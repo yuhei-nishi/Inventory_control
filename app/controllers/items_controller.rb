@@ -10,9 +10,8 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if  @item.save
-      redirect_to items_path, notice: '食品登録しました'
+      redirect_to items_path
     else
-      flash[:alert] = '食品登録できませんでした'
       redirect_to action: "new"
     end
   end
@@ -24,13 +23,13 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
     @item.update(item_params)
-    redirect_to items_path, notice: '食品編集しました'
+    redirect_to items_path
   end
 
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
-    redirect_to items_path, notice: '食品を削除しました'
+    redirect_to items_path
   end
 
 end
