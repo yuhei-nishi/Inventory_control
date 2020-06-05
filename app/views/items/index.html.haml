@@ -1,0 +1,45 @@
+= render "items/header"
+.product
+  .product_box
+    .product_box_titel
+      [食品一覧]
+    .product_box_item
+      .product_box_item_list
+        .product_box_item_list_expiration
+          賞味期限
+        .product_box_item_list_name
+          食品名
+        .product_box_item_list_stock
+          個数
+        .product_box_item_list_purchase
+          購入日
+        .product_box_item_list_btn
+          = link_to new_item_path do
+            .product_box_item_list_btn_edit
+              %span.edit_btn
+                編集
+          = link_to new_item_path do
+            .product_box_item_list_btn_delete
+              %span.edit_btn
+                削除
+      - @items.each do |item|
+        .product_box_item_list
+          .product_box_item_list_expiration
+            =item.expiration
+          .product_box_item_list_name
+            =item.name
+          .product_box_item_list_stock
+            =item.stock
+          .product_box_item_list_purchase
+            =item.purchase
+          .product_box_item_list_btn
+            = link_to new_item_path do
+              .product_box_item_list_btn_edit
+                %span.edit_btn
+                  編集
+            = link_to new_item_path do
+              .product_box_item_list_btn_delete
+                %span.delete_btn
+                  削除
+= render 'exisibition'
+  

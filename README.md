@@ -39,7 +39,7 @@ Things you may want to cover:
 |name|string|null: false|
 |image|string|
 |stock|integer|null: false|
-|category|reference|null: false, foreign_key: true|
+|category_id|integer|null: false, foreign_key: true|
 |group|reference|null: false, foreign_key: true|
 ### Association
 - belongs_to :group

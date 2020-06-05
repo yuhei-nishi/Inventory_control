@@ -1,7 +1,15 @@
-= render "header"
+= render "items/header"
 .main
+  -# .main_left
+  -#   .main_left_box
+  -#     .main_left_box_item
+  -#       在庫一覧
+  -#       %p ユニフォーム
+  -#       %p 日用品
   .main_box
     .main_box_name
-      %p 在庫管理アプリ
-    .main_box_start
-      = link_to "スタート", "#"
+      %p 【冷蔵庫管理アプリ】
+    = link_to items_path do
+      .main_box_start
+        %span.main_box_start_btn
+          スタート
