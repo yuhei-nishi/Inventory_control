@@ -35,7 +35,7 @@
               .product_box_item_list_btn_edit
                 %span.edit_btn
                   編集
-            = link_to new_item_path do
+            = link_to item_path(item),method: :delete do
               .product_box_item_list_btn_delete
                 %span.delete_btn
                   削除

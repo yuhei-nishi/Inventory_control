@@ -27,6 +27,12 @@ class ItemsController < ApplicationController
     redirect_to items_path, notice: '食品編集しました'
   end
 
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to items_path, notice: '食品を削除しました'
+  end
+
 end
 
 private
