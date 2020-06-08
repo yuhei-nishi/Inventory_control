@@ -2,13 +2,13 @@
   .header_box
     %ul.header_box_right
       %li.header_box_right_name
-        = link_to "ログイン", "#"
+        = link_to "ログイン", new_user_session_path
       %li.header_box_right_name
         = link_to "マイページ", "#"
       %li.header_box_right_name
-        = link_to "新規登録", "#"
+        = link_to "新規登録", new_user_registration_path
       %li.header_box_right_name
-        = link_to "ログアウト", "#"
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
     %ul.header_box_left
       %li.header_box_left_name
         ユーザーネーム
