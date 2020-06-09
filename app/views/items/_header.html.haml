@@ -1,17 +1,14 @@
 %header.header
   .header_box
     %ul.header_box_right
+    - if user_signed_in?
+      %li.header_box_right_name
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
+    - else
       %li.header_box_right_name
         = link_to "ログイン", new_user_session_path
       %li.header_box_right_name
-        = link_to "マイページ", "#"
-      %li.header_box_right_name
         = link_to "新規登録", new_user_registration_path
-      %li.header_box_right_name
-        = link_to "ログアウト", destroy_user_session_path, method: :delete
-    %ul.header_box_left
-      %li.header_box_left_name
-        ユーザーネーム
     = link_to root_path do
       %p.header_box_center
-        冷蔵庫管理アプリ
+        【冷蔵庫管理アプリ】
