@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
-  database: Inventory_control_production
-  username: Inventory_control
-  password: <%= ENV['INVENTORY_CONTROL_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  # database: Inventory_control_production
+  # username: Inventory_control
+  # password: <%= ENV['INVENTORY_CONTROL_DATABASE_PASSWORD'] %>
