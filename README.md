@@ -1,55 +1,52 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-# Inventory_control DB設計
-## usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|email|string|null: false|
-|password|string|null: false|
-|name|string|null: false|
-### Association
-- has_many :groups
-
-## itemsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|image|string|
-|stock|integer|null: false|
-|category_id|integer|null: false, foreign_key: true|
-|group|reference|null: false, foreign_key: true|
-### Association
-- belongs_to :group
-- belongs_to_active_hash :category
-
-## groupsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|user|reference|null: false, foreign_key: true|
-### Association
-- has_many :items
-- belongs_to :user
+# Inventory_control
+ 
+冷蔵庫の中を管理する為のWebアプリです。
+ 
+# DEMO
+ 
+冷蔵庫の中を管理することができます。
+![](https://gyazo.com/a66409fc87f0618f20b9309e41d8095c)
+ 
+# Features
+ 
+冷蔵庫に入っている食品の賞味期限を管理することで、食品ロスを削減する。
+ 
+# Requirement
+ 
+* ruby '2.5.1'
+ 
+# Installation
+ 
+```bash
+rbenv install 2.5.1
+bundle install
+```
+ 
+# Usage
+ 
+```bash
+git clone https://github.com/yuhei-nishi/Inventory_control.git
+cd examples
+bundle install
+```
+ 
+# Note
+ 
+環境はテストしていません。
+ 
+<!-- # Author
+ 
+作成情報を列挙する
+ 
+* 作成者
+* 所属
+* E-mail
+ 
+# License
+ライセンスを明示する
+ 
+"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+ 
+社内向けなら社外秘であることを明示してる
+ 
+"hoge" is Confidential. -->
